@@ -2,7 +2,7 @@ public class Ball
 {
     private float x,y,xDelta,yDelta;
     private int radius;
-    public Ball(float x, float y, float xDelta, float yDelta)
+    public Ball(float x, float y, int radius, float xDelta, float yDelta)
     {
 
     }
@@ -46,5 +46,15 @@ public class Ball
     public void move() {
         x += xDelta;
         y += yDelta;
+    }
+    public void reflectHorizontal(){
+        xDelta = -xDelta;
+    }
+    public void reflectVertical(){
+        yDelta = -yDelta;
+    }
+    @Override
+    public String toString(){
+        return "Ball "+x+" "+y+" "+"speed="+xDelta+" "+yDelta;
     }
 }
