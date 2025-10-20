@@ -1,7 +1,14 @@
 public class Ball
 {
-    private float x,y,xDelta,yDelta;
+    private float x,y,z,xDelta,yDelta;
     private int radius;
+
+    public Ball(float x, float y, float z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
     public Ball(float x, float y, int radius, float xDelta, float yDelta)
     {
 
@@ -18,6 +25,19 @@ public class Ball
 
     public void setY(float y) {
         this.y = y;
+    }
+
+    public float getZ() {
+        return z;
+    }
+
+    public void setZ(float z) {
+        this.z = z;
+    }
+    public void setXYZ(int x, int y, int z){
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
     public int getRadius() {
@@ -53,8 +73,16 @@ public class Ball
     public void reflectVertical(){
         yDelta = -yDelta;
     }
+
     @Override
-    public String toString(){
-        return "Ball "+x+" "+y+" "+"speed="+xDelta+" "+yDelta;
+    public String toString() {
+        return "Ball{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                ", xDelta=" + xDelta +
+                ", yDelta=" + yDelta +
+                ", radius=" + radius +
+                '}';
     }
 }

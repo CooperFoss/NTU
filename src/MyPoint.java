@@ -15,7 +15,7 @@ public class MyPoint {
     public void setY(int y){
         this.y=y;
     }
-    public int[2] getXY(){
+    public int[] getXY(){
         return new int[]{x,y};
     }
     public void setXY(int x,int y){
