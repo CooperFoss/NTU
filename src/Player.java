@@ -24,7 +24,7 @@ public class Player {
     }
     public void kick(Ball ball){
         float kickx;
-        if (number==3 || number==4)
+        if (number==2)
                 kickx = (float) (Math.random()*-20);
         else kickx = (float) (Math.random()*20);
         float kicky;
