@@ -1,4 +1,4 @@
-public class Shape {
+public abstract class Shape {
     protected String color = "red";
     protected boolean filled = true;
 
@@ -16,12 +16,8 @@ public class Shape {
     public boolean isFilled() {
         return filled;
     }
-    public double getArea() {
-        return 0;
-    }
-    public double getPerimeter(){
-        return 0;
-    }
+    public abstract double getArea();
+    public abstract double getPerimeter();
     @Override
     public String toString() {
         return "Shape{" +
